@@ -57,9 +57,18 @@ public class Dangky_Activity extends AppCompatActivity {
 
             long kq = nguoiDungDAO.inertnguoidung(nguoiDung);
             if (kq > 0) {
-                Toast.makeText(Dangky_Activity.this, "Đăng kí thành công", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(Dangky_Activity.this, Dangky_Activity.class);
+
+
+
+                Intent intent = new Intent(Dangky_Activity.this, ThongTin_CaNhan_Activity.class);
                 Bundle bundle =new Bundle();
+                bundle.putString("tendangnhap", edtendangnhaps.getText().toString());
+                bundle.putString("matkhau", edmatkhaus.getText().toString());
+                bundle.putString("hoten", edhoten.getText().toString());
+                bundle.putString("truongdanghoc", edtruongdanghoc.getText().toString());
+                bundle.putString("quequan", edquequan.getText().toString());
+                intent.putExtra("thongtincanhan", bundle);
+                startActivity(intent);
 
 
             } else {

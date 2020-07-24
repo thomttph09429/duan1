@@ -3,23 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/nav_home">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.poly.tracnghiem12.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_home"
+        android:name="com.poly.tracnghiem12.Fragment.Trangchu_Fragment"
+        android:label="@string/menu_trangchu"
+        tools:layout="@layout/fragment_trangchu_" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.poly.tracnghiem12.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/gioithieu"
+        android:name="com.poly.tracnghiem12.Fragment.Gioithieu_Fragment"
+        android:label="@string/menu_gioithieu"
+        tools:layout="@layout/fragment_gioithieu_" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.poly.tracnghiem12.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/thongtincanhan"
+        android:name="com.poly.tracnghiem12.Fragment.Thongtincanhan_Fragment"
+        android:label="@string/menu_thongtincanhan"
+        tools:layout="@layout/fragment_thongtincanhan_" />
+    <fragment
+        android:id="@+id/lichsulambai"
+        android:name="com.poly.tracnghiem12.Fragment.Lichsulambai_Fragment"
+        android:label="@string/menu_lichsulambai"
+        tools:layout="@layout/fragment_lichsulambai_" />
+    <fragment
+        android:id="@+id/thoatungdung"
+        android:name="com.poly.tracnghiem12.Fragment.Thoatungdung_Fragment"
+        android:label="@string/menu_thoatungdung"
+        tools:layout="@layout/fragment_thoatungdung_" />
+
 </navigation>

@@ -29,7 +29,7 @@ public class NguoiDungDAO extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String create_table = "create table " + TABLE_NAME + " (" + COLUMN_TENDANGNHAP + " text primary key , " + COLUMN_MATKHAU + " text, "+COLUMN_HOTEN+" text , "+COLUMN_TRUONGDANGHOC+" text ,"+COLUMN_QUEQUAN+" text )";
+        String create_table = "create table " + TABLE_NAME + " (" + COLUMN_TENDANGNHAP + " text primary key , " + COLUMN_MATKHAU + " text, " + COLUMN_HOTEN + " text , " + COLUMN_TRUONGDANGHOC + " text ," + COLUMN_QUEQUAN + " text )";
 
         db.execSQL(create_table);
 
@@ -52,6 +52,28 @@ public class NguoiDungDAO extends SQLiteOpenHelper {
         return kq;
     }
 
+    public List<NguoiDung> getallnguoidung() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        List<NguoiDung> nguoiDungList = new ArrayList<>();
+        String Select = "SELECT * FROM " + TABLE_NAME;
+        Cursor cursor = sqLiteDatabase.rawQuery(Select, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            NguoiDung nguoiDung = new NguoiDung();
+            nguoiDung.setTendangnhap(cursor.getString(cursor.getColumnIndex(COLUMN_TENDANGNHAP)));
+            nguoiDung.setMatkhau(cursor.getString(cursor.getColumnIndex(COLUMN_MATKHAU)));
+            nguoiDung.setHoten(cursor.getString(cursor.getColumnIndex(COLUMN_HOTEN)));
+            nguoiDung.setTruongdanghoc(cursor.getString(cursor.getColumnIndex(COLUMN_TRUONGDANGHOC)));
+            nguoiDung.setQuequan(cursor.getString(cursor.getColumnIndex(COLUMN_QUEQUAN)));
+            nguoiDungList.add(nguoiDung);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return nguoiDungList;
+
+
+    }
+
 //    public boolean kiemtranguoidung() {
 //        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 //        String SELECT = "SELECT * FROM " + TABLE_NAME;
@@ -67,7 +89,7 @@ public class NguoiDungDAO extends SQLiteOpenHelper {
     public boolean kiemtralogin(String tendangnhap, String matkhau) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
-        String truyvan = "SELECT * FROM  " + TABLE_NAME + " WHERE  " + COLUMN_TENDANGNHAP + " = '" + tendangnhap  + "' AND " + COLUMN_MATKHAU + "= '" + matkhau + "'";
+        String truyvan = "SELECT * FROM  " + TABLE_NAME + " WHERE  " + COLUMN_TENDANGNHAP + " = '" + tendangnhap + "' AND " + COLUMN_MATKHAU + "= '" + matkhau + "'";
         Cursor cursor = sqLiteDatabase.rawQuery(truyvan, null);
         if (cursor.getCount() != 0) {
             return true;
