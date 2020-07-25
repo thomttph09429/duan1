@@ -1,14 +1,341 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".Fragment.Trangchu_Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tvhuongdan"
+        android:paddingTop="50dp"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="Bấm vào đây để xem hướng dẫn cách làm"
+        android:textColor="#AF261B"
+        />
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
 
-</FrameLayout>
+            >
+            <LinearLayout
+                android:id="@+id/toan"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/toan"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="Toán"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tienganh"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/tienganh"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="Tiếng anh"
+                    android:layout_height="wrap_content"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hoahoc"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/hoa"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="Hóa học"
+                    android:layout_height="wrap_content"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="40dp"
+
+            >
+            <LinearLayout
+                android:id="@+id/vatli"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/li"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="Vật lí"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/gdcd"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/gd"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="GDCD"
+                    android:layout_height="wrap_content"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sinhhoc"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/sinh"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="Sinh học"
+                    android:layout_height="wrap_content"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+
+            >
+            <LinearLayout
+                android:id="@+id/nguvan"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/van"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="Ngữ văn"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lichsu"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/ls"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="Lịch sử"
+                    android:layout_height="wrap_content"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/diali"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:src="@drawable/toa1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:text="Địa lí"
+                    android:layout_height="wrap_content"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+"
+
+
+</LinearLayout>

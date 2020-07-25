@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 
 import com.poly.tracnghiem12.R;
 
-public class Thongtincanhan_Fragment extends Fragment {
+
+public class DeThi_Toan_Fragment extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_thongtincanhan_, container, false);
+        return inflater.inflate(R.layout.fragment_de_thi__toan_, container, false);
     }
 }
