@@ -62,7 +62,7 @@ public class DeThi_Toan_Fragment extends Fragment {
         lvdethitoan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(),"chưa code xong", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "chưa code xong", Toast.LENGTH_LONG).show();
             }
         });
 

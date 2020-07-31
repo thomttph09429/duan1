@@ -10,13 +10,14 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.poly.tracnghiem12.DAO.NguoiDungDAO;
 import com.poly.tracnghiem12.Model.NguoiDung;
 
 public class Dangky_Activity extends AppCompatActivity {
     NguoiDungDAO nguoiDungDAO;
-    EditText edtendangnhaps, edmatkhaus, edhoten, edtruongdanghoc, edquequan;
-
+    EditText edtendangnhaps, edhoten, edtruongdanghoc, edquequan;
+TextInputLayout textInputLayoutmatkhau;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,11 @@ public class Dangky_Activity extends AppCompatActivity {
 
 
         edtendangnhaps = findViewById(R.id.edtendangnhaps);
-        edmatkhaus = findViewById(R.id.edmatkhaus);
+
         edhoten = findViewById(R.id.edhoten);
         edtruongdanghoc = findViewById(R.id.edtruongdanghoc);
         edquequan = findViewById(R.id.edquequan);
-
+textInputLayoutmatkhau= findViewById(R.id.etPasswordLayout);
     }
 
     public void back(View view) {
@@ -39,16 +40,16 @@ public class Dangky_Activity extends AppCompatActivity {
     }
 
     public void dangkitaikhoan(View view) {
-        if (edtendangnhaps.getText().toString().isEmpty() || edmatkhaus.getText().toString().isEmpty() || edhoten.getText().toString().isEmpty() || edtruongdanghoc.getText().toString().isEmpty() || edquequan.getText().toString().isEmpty()) {
+        if (edtendangnhaps.getText().toString().isEmpty() || textInputLayoutmatkhau.getEditText().getText().toString().isEmpty() || edhoten.getText().toString().isEmpty() || edtruongdanghoc.getText().toString().isEmpty() || edquequan.getText().toString().isEmpty()) {
             Toast.makeText(Dangky_Activity.this, "Không được để trống", Toast.LENGTH_LONG).show();
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-        } else if (edmatkhaus.getText().toString().length() < 6) {
+        } else if (textInputLayoutmatkhau.getEditText().getText().toString().length() < 6) {
             Toast.makeText(Dangky_Activity.this, "mật khẩu nhập nhiều hơn 5 kí tự", Toast.LENGTH_LONG).show();
 
         } else {
             NguoiDung nguoiDung = new NguoiDung();
-            nguoiDung.setMatkhau(edmatkhaus.getText().toString());
+            nguoiDung.setMatkhau(textInputLayoutmatkhau.getEditText().getText().toString());
             nguoiDung.setTendangnhap(edtendangnhaps.getText().toString());
             nguoiDung.setHoten(edhoten.getText().toString());
             nguoiDung.setTruongdanghoc(edtruongdanghoc.getText().toString());
@@ -63,7 +64,7 @@ public class Dangky_Activity extends AppCompatActivity {
                 Intent intent = new Intent(Dangky_Activity.this, ThongTin_CaNhan_Activity.class);
                 Bundle bundle =new Bundle();
                 bundle.putString("tendangnhap", edtendangnhaps.getText().toString());
-                bundle.putString("matkhau", edmatkhaus.getText().toString());
+                bundle.putString("matkhau", textInputLayoutmatkhau.getEditText().getText().toString());
                 bundle.putString("hoten", edhoten.getText().toString());
                 bundle.putString("truongdanghoc", edtruongdanghoc.getText().toString());
                 bundle.putString("quequan", edquequan.getText().toString());

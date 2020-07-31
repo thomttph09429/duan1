@@ -13,14 +13,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.poly.tracnghiem12.DAO.NguoiDungDAO;
 import com.poly.tracnghiem12.Model.NguoiDung;
 
 public class Login_Activity extends AppCompatActivity {
     EditText edtendangnhap;
-    EditText edmatkhau;
     NguoiDungDAO nguoiDungDAO;
     Button btndangnhap, btndangki, btnloginfb;
+    TextInputLayout textInputLayout;
+
 
 
     @Override
@@ -30,9 +32,7 @@ public class Login_Activity extends AppCompatActivity {
 
 
         edtendangnhap = findViewById(R.id.edtendanhnhap);
-        edmatkhau = findViewById(R.id.edmatkhau);
-
-
+textInputLayout = findViewById(R.id.textInputLayout);
         btndangki = findViewById(R.id.btndangki);
         btndangnhap = findViewById(R.id.btndangnhap);
         btnloginfb = findViewById(R.id.btnloginfb);
@@ -60,7 +60,7 @@ public class Login_Activity extends AppCompatActivity {
         nguoiDungDAO = new NguoiDungDAO(this);
 
         String tendangnhap = edtendangnhap.getText().toString();
-        String matkhau = edmatkhau.getText().toString();
+        String matkhau = textInputLayout.getEditText() .getText().toString();
         boolean kiemtra = nguoiDungDAO.kiemtralogin(tendangnhap, matkhau);
         if (kiemtra) {
             Intent intent = new Intent( Login_Activity.this, ThongTin_CaNhan_Activity.class);

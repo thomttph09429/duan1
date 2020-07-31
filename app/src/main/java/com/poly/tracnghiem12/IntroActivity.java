@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.poly.tracnghiem12.Adapter.IntroViewPagerAdapter;
 
@@ -21,11 +20,21 @@ public class IntroActivity extends AppCompatActivity {
     private TextView[] tvnDots;
     ConstraintLayout constraintLayout;
     Button btnback, btnnext;
+    private PrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
+
+
+        prefManager = new PrefManager(this);
+        if (!prefManager.isFirstTimeLaunch()) {
+            launchHomeScreen();
+            finish();
+        }
+
+
         btnnext = findViewById(R.id.btnnext);
         btnback = findViewById(R.id.btnback);
 
@@ -112,4 +121,9 @@ public class IntroActivity extends AppCompatActivity {
     };
 
 
+    private void launchHomeScreen() {
+        prefManager.setFirstTimeLaunch(false);
+        startActivity(new Intent(IntroActivity.this, HomeActivity.class));
+        finish();
+    }
 }

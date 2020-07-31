@@ -1,5 +1,8 @@
 package com.poly.tracnghiem12.Fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.poly.tracnghiem12.R;
+import com.poly.tracnghiem12.ThongTin_CaNhan_Activity;
 
 public class Thongtincanhan_Fragment extends Fragment {
 
@@ -17,6 +21,25 @@ public class Thongtincanhan_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_thongtincanhan_, container, false);
+        View view = inflater.inflate(R.layout.fragment_thongtincanhan_, container, false);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("thông báo");
+        builder.setMessage("Nếu bạn cần chỉnh sửa thông tin cá nhân, hãy nhấn vào đây");
+        builder.setPositiveButton("Chỉnh sửa", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getActivity(), ThongTin_CaNhan_Activity.class);
+                startActivity(intent);
+            }
+        });
+        builder.setNegativeButton("để sau", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.create();
+        builder.show();
+        return view;
     }
 }

@@ -20,33 +20,40 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.084" />
 
-    <EditText
-        android:id="@+id/edmatkhaus"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPasswordLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Mật khẩu"
-        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtendangnhaps"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/edtmatkhaus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
         android:id="@+id/edhoten"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="468dp"
         android:ems="10"
         android:hint="Họ và tên"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edmatkhaus"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/edtruongdanghoc"
@@ -76,6 +83,7 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <Button
+        android:background="@drawable/shape"
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,17 +97,18 @@
         app:layout_constraintVertical_bias="0.057" />
 
     <TextView
-        android:textColor="#2486E8"
-        android:onClick="back"
         android:id="@+id/tvquaylai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="back"
         android:text="Quay lại"
+        android:textColor="#2486E8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.144" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

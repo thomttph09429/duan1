@@ -22,39 +22,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.067" />
 
-    <EditText
-        android:id="@+id/edmatkhau"
-        android:layout_width="0dp"
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:passwordToggleEnabled="true"
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Mật khẩu"
-        android:inputType="textPassword"
+        android:layout_marginTop="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtendanhnhap"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/edmatkhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.433"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtendanhnhap"
+            app:layout_constraintVertical_bias="0.063" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="460dp"
+        android:layout_marginBottom="472dp"
         android:text="lưu mật khẩu?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edmatkhaus"
-        app:layout_constraintVertical_bias="0.689" />
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
 
         android:id="@+id/btndangnhap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3DB8B5"
+        android:background="@drawable/shape2"
         android:onClick="dangnhap"
         android:text="Đăng nhập"
         android:textColor="#ffffff"
@@ -69,7 +84,7 @@
         android:id="@+id/btndangki"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3DB8B5"
+        android:background="@drawable/shape2"
         android:onClick="dangki"
         android:text="đăng kí"
         android:textColor="#ffffff"

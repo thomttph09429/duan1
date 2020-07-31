@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MonHoc_Activity"
-            android:parentActivityName=".HomeActivity"
+        <activity android:name=".Tailieu_Activity"
+            android:parentActivityName=".MonHoc_Activity"
             android:theme="@style/mystyle"/>
-
+        <activity
+            android:name=".MonHoc_Activity"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/mystyle" />
         <activity
             android:name=".ThongTin_CaNhan_Activity"
             android:parentActivityName=".HomeActivity"
@@ -20,17 +23,24 @@
         <activity android:name=".Dangky_Activity" />
         <activity android:name=".Login_Activity" />
         <activity android:name=".ScreenActivity" />
-        <activity android:name=".HomeActivity">
+
+
+
+        <activity android:name=".IntroActivity">
+
+
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
-            android:name=".IntroActivity"
+            android:name=".HomeActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+           />
     </application>
 
 </manifest>
