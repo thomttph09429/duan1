@@ -1,4 +1,4 @@
-package com.poly.tracnghiem12.Toan;
+package com.poly.tracnghiem12.Tienganh10;
 
 public class Question_Tienganh10 {
     private String question;

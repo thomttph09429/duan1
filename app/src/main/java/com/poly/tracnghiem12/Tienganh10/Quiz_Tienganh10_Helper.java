@@ -1,4 +1,4 @@
-package com.poly.tracnghiem12.Toan;
+package com.poly.tracnghiem12.Tienganh10;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.poly.tracnghiem12.Toan.Quiz_Tienganh10_Contract.*;
+import com.poly.tracnghiem12.Tienganh10.Quiz_Tienganh10_Contract.*;
 
 import java.util.ArrayList;
 import java.util.List;

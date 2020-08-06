@@ -1,4 +1,4 @@
-package com.poly.tracnghiem12.Toan;
+package com.poly.tracnghiem12.Tienganh10;
 
 import android.provider.BaseColumns;
 

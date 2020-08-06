@@ -14,8 +14,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.poly.tracnghiem12.Toan.Question_Tienganh10;
-import com.poly.tracnghiem12.Toan.Quiz_Tienganh10_Helper;
+import com.poly.tracnghiem12.Tienganh10.Question_Tienganh10;
+import com.poly.tracnghiem12.Tienganh10.Quiz_Tienganh10_Helper;
 
 import java.util.Collections;
 import java.util.List;
