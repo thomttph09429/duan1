@@ -20,7 +20,7 @@ import com.poly.tracnghiem12.R;
 
 
 public class Trangchu_Fragment extends Fragment {
-    LinearLayout toan, vatli, hoahoc, diali, sinhhoc, gdcd, nguvan, tienganh, lichsu;
+    LinearLayout tienganh10, tienganh11, tienganh12;
     int id;
 
 
@@ -57,18 +57,12 @@ public class Trangchu_Fragment extends Fragment {
 
         });
 
-        toan = view.findViewById(R.id.toan);
-        nguvan = view.findViewById(R.id.nguvan);
-        vatli = view.findViewById(R.id.vatli);
-        hoahoc = view.findViewById(R.id.hoahoc);
-        diali = view.findViewById(R.id.diali);
-        sinhhoc = view.findViewById(R.id.sinhhoc);
-        gdcd = view.findViewById(R.id.gdcd);
-        tienganh = view.findViewById(R.id.tienganh);
-        lichsu = view.findViewById(R.id.lichsu);
+        tienganh10 = view.findViewById(R.id.tienganh10);
+        tienganh11 = view.findViewById(R.id.sinhhoc);
+        tienganh12 = view.findViewById(R.id.tienganh12);
 
 
-        toan.setOnClickListener(new View.OnClickListener() {
+        tienganh10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), MonHoc_Activity.class);

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#D6D3D3"
     android:orientation="vertical"
     android:padding="10dp"
     android:paddingBottom="20dp"
@@ -11,7 +11,6 @@
 
 
     <ListView
-
         android:id="@+id/lvtailieu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

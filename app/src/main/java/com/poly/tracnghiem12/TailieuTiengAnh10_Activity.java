@@ -7,18 +7,20 @@ import android.os.Bundle;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class Tailieu_Activity extends AppCompatActivity {
+public class TailieuTiengAnh10_Activity extends AppCompatActivity {
     PDFView pdfView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tailieu_);
-        setTitle("Đề thi thử");
 
         pdfView = findViewById(R.id.pdfview);
         Intent intent = getIntent();
         String links = intent.getStringExtra("linkURL");
+        String ten = intent.getStringExtra("tentailieu");
         pdfView.fromAsset(links).load();
+        setTitle(ten);
+
     }
 }

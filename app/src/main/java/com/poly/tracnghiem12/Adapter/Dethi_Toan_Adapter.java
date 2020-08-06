@@ -39,7 +39,7 @@ public class Dethi_Toan_Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = LayoutInflater.from(context).inflate(R.layout.row_dethitoan, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.row_dethitienganh10, parent, false);
         TextView ten_De_Thi_toan = view.findViewById(R.id.tv_tendethitoan);
         TextView tvthoigian = view.findViewById(R.id.tv_thoigian);
         TextView tvsocau = view.findViewById(R.id.tv_socauhoi);

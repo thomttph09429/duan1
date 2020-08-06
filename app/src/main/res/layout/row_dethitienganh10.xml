@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:paddingTop="20dp"
     android:padding="10dp"
-    android:background="@drawable/shape"
+    android:background="@drawable/shape4"
 
     android:orientation="vertical">
 
