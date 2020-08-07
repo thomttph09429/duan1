@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class TaiLieu_Toan_Fragment extends Fragment {
+public class TaiLieu_Tienganh10_Fragment extends Fragment {
     List<Tailieu_pdf> tailieu_pdfs;
     Tailieu_pdf_adapter tailieu_pdf_adapter;
     Intent intent;
@@ -42,21 +42,21 @@ public class TaiLieu_Toan_Fragment extends Fragment {
                 String links = tailieu_pdf.getPdf();
                 String tentailieu = tailieu_pdf.getTentailieu();
                 intent.putExtra("linkURL", links);
-                intent.putExtra("tentailieu",tentailieu );
+                intent.putExtra("tentailieu", tentailieu);
 
                 startActivity(intent);
             }
         });
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 1 có đáp án", "de1.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 2 có đáp án", "de2.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 3 có đáp án", "de3.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 4 có đáp án", "de4.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 5 có đáp án", "de5.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 6 có đáp án", "de6.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi  thpt quốc gia số 7 có đáp án", "de7.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 8 có đáp án", "de8.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 9 có đáp án", "de9.pdf", "7 trang"));
-        tailieu_pdfs.add(new Tailieu_pdf("Đề thi thpt quốc gia số 10 có đáp án", "de10.pdf", "7 trang"));
+        tailieu_pdfs.add(new Tailieu_pdf("Câu gián tiếp tiếng anh lớp 10", "Cau_gian_tiep_Mon_Tieng_anh_lop_10.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Động từ tiếng anh lớp 10", "Dong_tu_DABTTL_mon_Tieng_anh_lop_10.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Giới từ ", "Gioi_tu_BTTL_mon_Tieng_anh_lop_10.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Lấy gốc tiếng anh từ 12 thì của động từ", "Lay_goc_tieng_Anh_tu_12_thi_dong_tu.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Liên từ trong tiếng anh", "Lien_tu_BTTL_mon_Tieng_anh_lop_10.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Qúa khứ đơn và quá khứ hoàn thành lớp 10", "Qua_khu_don_va_qua_khu_hoan_thanh_BTTL_mon_Tieng_anh_lop_10.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Thì quá khứ đơn", "Qua_khu_don_va_qua_khu_hoan_thanh_Mon_Tieng_anh_lop_10.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Thì hiện tại đơn và hiện tại tiếp diễn", "Thi_hien_tai_don_va_hien_tai_tiep_dien_DABTTL_mon_Tieng_anh_lop_10.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Thì hiện tại tiếp diễn", "Thi_hien_tai_don_va_hien_tai_tiep_dien_BTTL_mon_Tieng_anh_lop_10.pdf", "Đọc"));
+        tailieu_pdfs.add(new Tailieu_pdf("Tính từ và trạng từ", "Tinh_tu_trang_tu_BTTL_mon_Tieng_anh_lop_10.pdf", "Đọc"));
         tailieu_pdf_adapter = new Tailieu_pdf_adapter(tailieu_pdfs, getContext());
         lv.setAdapter(tailieu_pdf_adapter);
 

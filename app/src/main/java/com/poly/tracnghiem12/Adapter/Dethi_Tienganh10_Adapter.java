@@ -7,17 +7,17 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.poly.tracnghiem12.Model.Dethi_Toan;
+import com.poly.tracnghiem12.Model.Dethi_Tienganh10;
 import com.poly.tracnghiem12.R;
 
 import java.util.List;
 
-public class Dethi_Toan_Adapter extends BaseAdapter {
+public class Dethi_Tienganh10_Adapter extends BaseAdapter {
     Context context;
-    List<Dethi_Toan> dethi_toans;
-    Dethi_Toan dethi_toan;
+    List<Dethi_Tienganh10> dethi_toans;
+    Dethi_Tienganh10 dethi_toan;
 
-    public Dethi_Toan_Adapter(Context context, List<Dethi_Toan> dethi_toans) {
+    public Dethi_Tienganh10_Adapter(Context context, List<Dethi_Tienganh10> dethi_toans) {
         this.context = context;
         this.dethi_toans = dethi_toans;
     }

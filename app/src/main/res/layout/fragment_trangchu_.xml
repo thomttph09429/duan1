@@ -3,25 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3CE61"
+    android:background="@drawable/bachground"
     android:orientation="vertical"
+
     android:padding="10dp"
     tools:context=".Fragment.Trangchu_Fragment">
-    <TextView
-        android:id="@+id/tvhuongdan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="50dp"
-        android:text="Bấm vào đây để xem hướng dẫn cách làm"
-        android:textColor="#AF261B" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:orientation="vertical">
+
+
 
         <LinearLayout
+            android:paddingTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
@@ -118,109 +109,18 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:orientation="horizontal"
-            android:weightSum="3"
 
-            >
-
-            <LinearLayout
-                android:id="@+id/vatli"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/shape3"
-                android:gravity="center"
-                android:orientation="vertical"
-
-                >
-
-                <ImageView
-
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/li" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Vật lí"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/gdcd"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/shape3"
-                android:gravity="center"
-                android:orientation="vertical"
-
-                >
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/gd" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="GDCD"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sinhhoc"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/shape3"
-                android:gravity="center"
-                android:orientation="vertical"
-
-                >
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/sinh" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Sinh học"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
+    <TextView
+        android:id="@+id/tvhuongdan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:text="Bấm vào đây để xem hướng dẫn cách làm"
+        android:textColor="#AF261B" />
 
 
 
-    </LinearLayout>
 
 
 

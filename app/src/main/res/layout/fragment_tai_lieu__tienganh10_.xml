@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:paddingBottom="20dp"
-    tools:context=".Fragment.TaiLieu_Toan_Fragment">
+    tools:context=".Fragment.TaiLieu_Tienganh10_Fragment">
 
 
     <ListView

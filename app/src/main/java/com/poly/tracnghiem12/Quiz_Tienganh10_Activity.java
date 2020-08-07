@@ -1,7 +1,10 @@
 package com.poly.tracnghiem12;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -14,6 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.poly.tracnghiem12.Tienganh10.Question_Tienganh10;
 import com.poly.tracnghiem12.Tienganh10.Quiz_Tienganh10_Helper;
 
@@ -27,8 +31,7 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
     private ColorStateList textColorDefaultcd;
     private CountDownTimer countDownTimer;
     private long timeleftinmilis;
-
-
+    AppBarLayout appBarLayout;
 
 
     TextView tv_high_socre, tv_question_count, tv_count_down, tvquestion;
@@ -45,19 +48,30 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
     private boolean ansWered;
 
     List<Question_Tienganh10> questionList;
-
+    Quiz_Tienganh10_Helper quiz_tienganh10_helper;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz__tienganh10_);
+
+        quiz_tienganh10_helper= new Quiz_Tienganh10_Helper(this);
         Intent intent = getIntent();
         String tendethi = intent.getStringExtra("tendethi");
-        setTitle(tendethi);
+//        int index = Integer.parseInt(intent.getStringExtra("index"));
 
 
-        tv_high_socre = findViewById(R.id.tv_high_socre);
+
+//        if (index == 0) {
+//            quiz_tienganh10_helper.fillquestiontable1();
+//
+//        } else if (index == 1) {
+//            quiz_tienganh10_helper.fillquestiontable2();
+//
+//        }
+
+
         tv_count_down = findViewById(R.id.tv_count_down);
         tv_question_count = findViewById(R.id.tv_question_count);
         tvquestion = findViewById(R.id.tvquestion);
@@ -88,7 +102,16 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
                         checkanswer();
 
                     } else {
-                        Toast.makeText(Quiz_Tienganh10_Activity.this, "vui lòng chọn 1 câu trả lời", Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Quiz_Tienganh10_Activity.this );
+                        builder.setMessage("Vui lòng chọn 1 câu trả lời");
+                        builder.setPositiveButton("Đã hiểu", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                        builder.create();
+                        builder.show();
 
                     }
                 } else {
@@ -98,26 +121,25 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
         });
 
 
-
-
     }
+
     private void showsolution() {
-        rb1.setTextColor(Color.RED);
-        rb2.setTextColor(Color.RED);
-        rb3.setTextColor(Color.RED);
-        rb4.setTextColor(Color.RED);
+        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaul_optionred));
+        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaul_optionred));
+        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaul_optionred));
+        rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaul_optionred));
         switch (currentQuestion.getAnswer()) {
             case 1:
-                rb1.setTextColor(Color.GREEN);
+                rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaulgreen_optionred));
                 break;
             case 2:
-                rb1.setTextColor(Color.GREEN);
+                rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaulgreen_optionred));
                 break;
             case 3:
-                rb1.setTextColor(Color.GREEN);
+                rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaulgreen_optionred));
                 break;
             case 4:
-                rb1.setTextColor(Color.GREEN);
+                rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaulgreen_optionred));
                 break;
         }
         if (questioncouter < questionCountTotal) {
@@ -129,10 +151,10 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
     }
 
     public void shownextquestion() {
-        rb1.setTextColor(textColorDefaultRb);
-        rb2.setTextColor(textColorDefaultRb);
-        rb3.setTextColor(textColorDefaultRb);
-        rb4.setTextColor(textColorDefaultRb);
+        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaul_option));
+        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaul_option));
+        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaul_option));
+        rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.defaul_option));
         radio_droup.clearCheck();
         if (questioncouter < questionCountTotal) {
             currentQuestion = questionList.get(questioncouter);
@@ -147,15 +169,14 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
             btn_confirm.setText("Tiếp");
 
 
-
         } else {
             finishquiz();
 //            btn_confirm.setText("finish");
         }
 
 
-
     }
+
     private void startcountdown() {
         countDownTimer = new CountDownTimer(timeleftinmilis, 1000) {
             @Override
@@ -168,7 +189,7 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                timeleftinmilis=0;
+                timeleftinmilis = 0;
 
 //                checkanswer();
 
@@ -176,33 +197,35 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
 
         }.start();
     }
+
     private void updatecountdowntext() {
         int minutes = (int) ((timeleftinmilis / 1000) / 60);
         int seconds = (int) (timeleftinmilis / 1000) % 60;
         String timefomatted = String.format(Locale.getDefault(), "%02d : %02d", minutes, seconds);
         tv_count_down.setText(timefomatted);
-        if(timeleftinmilis <10000){
+        if (timeleftinmilis < 10000) {
             tv_count_down.setTextColor(Color.RED);
 
-        }else {
+        } else {
             tv_count_down.setTextColor(textColorDefaultcd);
         }
 
     }
+
     private void checkanswer() {
         ansWered = true;
 //        countDownTimer.cancel();
         RadioButton rbselect = findViewById(radio_droup.getCheckedRadioButtonId());
         int answerNR = radio_droup.indexOfChild(rbselect) + 1;
         if (answerNR == currentQuestion.getAnswer()) {
-            score++;
-            tv_high_socre.setText("Score:" + score);
+//            score++;
 
 
         }
         showsolution();
 
     }
+
     private void finishquiz() {
         finish();
     }
@@ -210,7 +233,7 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(countDownTimer != null){
+        if (countDownTimer != null) {
             countDownTimer.cancel();
         }
 

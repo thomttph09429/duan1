@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:background="#CCC4C4"
-    tools:context=".Fragment.DeThi_Toan_Fragment">
+    tools:context=".Fragment.DeThi_Tienganh_Fragment">
 
     <ListView
         android:divider="@android:color/transparent"

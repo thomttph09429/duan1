@@ -12,9 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.poly.tracnghiem12.Adapter.Toan_Adapter;
 import com.poly.tracnghiem12.MonHoc_Activity;
 import com.poly.tracnghiem12.R;
 
@@ -58,7 +56,7 @@ public class Trangchu_Fragment extends Fragment {
         });
 
         tienganh10 = view.findViewById(R.id.tienganh10);
-        tienganh11 = view.findViewById(R.id.sinhhoc);
+        tienganh11 = view.findViewById(R.id.tienganh11);
         tienganh12 = view.findViewById(R.id.tienganh12);
 
 

@@ -10,12 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
-import com.poly.tracnghiem12.Adapter.Toan_Adapter;
+import com.poly.tracnghiem12.Adapter.Tienganh10_Adapter;
 import com.poly.tracnghiem12.R;
 
 
-public class Toan_Fragment extends Fragment {
-    Toan_Adapter toan_adapter;
+public class Tienganh10_Fragment extends Fragment {
+    Tienganh10_Adapter toan_adapter;
     TabLayout tabLayout;
     ViewPager viewPager;
     View view;
@@ -25,7 +25,7 @@ public class Toan_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tienganh10_, container, false);
-        toan_adapter = new Toan_Adapter(getActivity().getSupportFragmentManager());
+        toan_adapter = new Tienganh10_Adapter(getActivity().getSupportFragmentManager());
         tabLayout = view.findViewById(R.id.tablayout_toan);
         viewPager = view.findViewById(R.id.viewpager_toan);
         viewPager.setAdapter(toan_adapter);

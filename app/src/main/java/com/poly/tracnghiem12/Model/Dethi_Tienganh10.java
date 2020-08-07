@@ -1,12 +1,13 @@
 package com.poly.tracnghiem12.Model;
 
-public class Dethi_Toan {
+public class Dethi_Tienganh10 {
     String ten_de_thi;
     String thoi_gian;
     String so_Cau;
 
 
-    public Dethi_Toan() {
+
+    public Dethi_Tienganh10() {
     }
 
     public String getTen_de_thi() {
@@ -34,7 +35,7 @@ public class Dethi_Toan {
     }
 
 
-    public Dethi_Toan(String ten_de_thi, String thoi_gian, String so_Cau) {
+    public Dethi_Tienganh10(String ten_de_thi, String thoi_gian, String so_Cau) {
         this.ten_de_thi = ten_de_thi;
         this.thoi_gian = thoi_gian;
         this.so_Cau = so_Cau;
