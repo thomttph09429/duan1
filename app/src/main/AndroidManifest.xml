@@ -55,7 +55,7 @@
         <activity android:name=".Dangky_Activity" />
         <activity android:name=".Login_Activity" />
         <activity android:name=".ScreenActivity" />
-        <activity android:name=".HomeActivity">
+        <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,7 +63,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IntroActivity"
+            android:name=".HomeActivity"
             android:label="@string/app_name" />
     </application>
 

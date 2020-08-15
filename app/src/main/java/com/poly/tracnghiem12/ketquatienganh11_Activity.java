@@ -47,7 +47,6 @@ public class ketquatienganh11_Activity extends AppCompatActivity {
                 Intent intent = new Intent(ketquatienganh11_Activity.this, Quiz_Tienganh11_Activity.class);
                 intent.putExtra("category", category);
                 intent.putExtra("tendethi", title);
-
                 startActivity(intent);
 
             }

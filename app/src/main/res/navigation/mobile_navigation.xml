@@ -22,11 +22,11 @@
         android:name="com.poly.tracnghiem12.Fragment.Thongtincanhan_Fragment"
         android:label="@string/menu_thongtincanhan"
         tools:layout="@layout/fragment_thongtincanhan_" />
-    <fragment
-        android:id="@+id/lichsulambai"
-        android:name="com.poly.tracnghiem12.Fragment.Lichsulambai_Fragment"
-        android:label="@string/menu_lichsulambai"
-        tools:layout="@layout/fragment_lichsulambai_" />
+<!--    <fragment-->
+<!--        android:id="@+id/lichsulambai"-->
+<!--        android:name="com.poly.tracnghiem12.Fragment.Lichsulambai_Fragment"-->
+<!--        android:label="@string/menu_lichsulambai"-->
+<!--        tools:layout="@layout/fragment_lichsulambai_" />-->
     <fragment
         android:id="@+id/thoatungdung"
         android:name="com.poly.tracnghiem12.Fragment.Thoatungdung_Fragment"

@@ -16,10 +16,7 @@
             android:id="@+id/thongtincanhan"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_thongtincanhan" />
-        <item
-            android:id="@+id/lichsulambai"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_lichsulambai" />
+
         <item
             android:id="@+id/thoatungdung"
             android:icon="@drawable/ic_menu_slideshow"

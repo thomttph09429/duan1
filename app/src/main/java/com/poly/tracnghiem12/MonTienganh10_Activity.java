@@ -12,7 +12,7 @@ public class MonTienganh10_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tienganh10_);
-        setTitle("Tiếng anh 10");
+        setTitle("Tiếng anh 12");
 
         Tienganh10_Fragment toan_fragment= new Tienganh10_Fragment();
         this.getSupportFragmentManager().beginTransaction().replace(R.id.monhoc_fragment, toan_fragment).commit();
