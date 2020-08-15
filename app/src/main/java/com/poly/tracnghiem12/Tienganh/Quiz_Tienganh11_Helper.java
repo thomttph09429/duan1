@@ -16,7 +16,7 @@ import java.util.List;
 public class Quiz_Tienganh11_Helper extends SQLiteOpenHelper {
     Quiz_Tienganh11_Activity quiz_tienganh11_activity;
     public static final String DATABASE_NAME1 = "quiztienganh11.db";
-    public static final int VERSION = 8;
+    public static final int VERSION = 9;
     SQLiteDatabase db;
 
     public Quiz_Tienganh11_Helper(Context context) {

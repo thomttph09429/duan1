@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class ketqua_Activity extends AppCompatActivity {
+public class ketquatienganh12_Activity extends AppCompatActivity {
     TextView tv_tongsocau, tv_tongdiem, tv_socausai, tv_socaudung;
     Button btn_mainmenu, btn_lamlai;
     String category;
@@ -45,7 +45,7 @@ public class ketqua_Activity extends AppCompatActivity {
         btn_lamlai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ketqua_Activity.this, Quiz_tienganh12_Activity.class);
+                Intent intent = new Intent(ketquatienganh12_Activity.this, Quiz_tienganh12_Activity.class);
                 intent.putExtra("category", category);
                 intent.putExtra("title",title );
 
@@ -56,7 +56,7 @@ public class ketqua_Activity extends AppCompatActivity {
         btn_mainmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ketqua_Activity.this, HomeActivity.class);
+                Intent intent = new Intent(ketquatienganh12_Activity.this, HomeActivity.class);
                 startActivity(intent);
 
             }

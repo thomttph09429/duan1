@@ -39,7 +39,11 @@ public class Quiz_Tienganh11_Activity extends AppCompatActivity {
     RadioGroup radio_droup;
     RadioButton rb1, rb2, rb3, rb4;
     Button btn_confirm;
+    int tongdiem=0;
+    int caudung = 0;
+    int causai = 0;
 
+    String tendethi;
 
     private ColorStateList textColorDefaultRb;
     private int questioncouter;
@@ -58,13 +62,10 @@ public class Quiz_Tienganh11_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz__tienganh11_);
 
         quiz_tienganh11_helper = new Quiz_Tienganh11_Helper(this);
-//        Intent intent = getIntent();
-//        String tendethi = intent.getStringExtra("tendethi");
-//        setTitle(tendethi);
-//        categoryvalue = intent.getStringExtra("category");
+
 
         Intent intentcategory = getIntent();
-        String tendethi = intentcategory.getStringExtra("tendethi");
+         tendethi = intentcategory.getStringExtra("tendethi");
         setTitle(tendethi);
         categoryvalue = intentcategory.getStringExtra("category");
 
@@ -167,8 +168,9 @@ public class Quiz_Tienganh11_Activity extends AppCompatActivity {
 
 
         } else {
-            finishquiz();
-//            btn_confirm.setText("finish");
+            sendata();
+            btn_confirm.setText("finish");
+
         }
 
 
@@ -215,17 +217,18 @@ public class Quiz_Tienganh11_Activity extends AppCompatActivity {
         RadioButton rbselect = findViewById(radio_droup.getCheckedRadioButtonId());
         int answerNR = radio_droup.indexOfChild(rbselect) + 1;
         if (answerNR == currentQuestion.getAnswer()) {
-//            score++;
+//            score++
+            caudung++;
+            tongdiem++;
 
 
         }
+        causai++;
         showsolution();
 
     }
 
-    private void finishquiz() {
-        finish();
-    }
+
 
     @Override
     protected void onDestroy() {
@@ -233,6 +236,19 @@ public class Quiz_Tienganh11_Activity extends AppCompatActivity {
         if (countDownTimer != null) {
             countDownTimer.cancel();
         }
+
+    }
+    public void sendata() {
+        btn_confirm.setText("Kết thúc");
+
+        Intent intent = new Intent(Quiz_Tienganh11_Activity.this, ketquatienganh11_Activity.class);
+        intent.putExtra("tongsocau", questionCountTotal);
+        intent.putExtra("caudung", caudung);
+        intent.putExtra("causai", causai);
+        intent.putExtra("tongdiem", caudung);
+        intent.putExtra("category", categoryvalue);
+        intent.putExtra("tendethi", tendethi);
+        startActivity(intent);
 
     }
 }

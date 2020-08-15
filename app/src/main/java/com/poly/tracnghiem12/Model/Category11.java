@@ -1,6 +1,6 @@
 package com.poly.tracnghiem12.Model;
 
-public class Category {
+public class Category11 {
     public static final String CATEGORY_DETHISO1 = "1";
     public static final String CATEGORY_DETHISO2 = "2";
     public static final String CATEGORY_DETHISO3 = "3";

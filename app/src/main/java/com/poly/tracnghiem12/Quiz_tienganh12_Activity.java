@@ -22,7 +22,6 @@ import com.poly.tracnghiem12.Tienganh.Quiz_tienganh12_Helper;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Locale;
 
 public class Quiz_tienganh12_Activity extends AppCompatActivity {
@@ -46,8 +45,8 @@ public class Quiz_tienganh12_Activity extends AppCompatActivity {
     boolean answered;
     int tongdiem;
     int caudung = 0;
-    String title;
     int causai = 0;
+    String title;
 
 
     @Override
@@ -223,7 +222,7 @@ public class Quiz_tienganh12_Activity extends AppCompatActivity {
     public void sendata() {
         btn_confirm12.setText("Kết thúc");
 
-        Intent intent = new Intent(Quiz_tienganh12_Activity.this, ketqua_Activity.class);
+        Intent intent = new Intent(Quiz_tienganh12_Activity.this, ketquatienganh12_Activity.class);
         intent.putExtra("tongsocau", questioncoutTotal);
         intent.putExtra("caudung", caudung);
         intent.putExtra("causai", causai);
