@@ -25,19 +25,14 @@ public class Thongtincanhan_Fragment extends Fragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("thông báo");
         builder.setMessage("Nếu bạn cần chỉnh sửa thông tin cá nhân, hãy nhấn vào đây");
-        builder.setPositiveButton("Chỉnh sửa", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Đã hiểu", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(getActivity(), ThongTin_CaNhan_Activity.class);
                 startActivity(intent);
             }
         });
-        builder.setNegativeButton("để sau", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
 
-            }
-        });
         builder.create();
         builder.show();
         return view;

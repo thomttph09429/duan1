@@ -6,13 +6,13 @@ import android.os.Bundle;
 
 import com.poly.tracnghiem12.Fragment.Tienganh10_Fragment;
 
-public class MonHoc_Activity extends AppCompatActivity {
+public class MonTienganh10_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mon_hoc_);
-        setTitle("Môn học");
+        setContentView(R.layout.activity_tienganh10_);
+        setTitle("Tiếng anh 10");
 
         Tienganh10_Fragment toan_fragment= new Tienganh10_Fragment();
         this.getSupportFragmentManager().beginTransaction().replace(R.id.monhoc_fragment, toan_fragment).commit();

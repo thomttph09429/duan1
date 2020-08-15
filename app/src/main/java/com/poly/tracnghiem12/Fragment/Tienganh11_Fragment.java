@@ -11,11 +11,13 @@ import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
 import com.poly.tracnghiem12.Adapter.Tienganh10_Adapter;
+import com.poly.tracnghiem12.Adapter.Tienganh11_Adapter;
 import com.poly.tracnghiem12.R;
 
 
-public class Tienganh10_Fragment extends Fragment {
-    Tienganh10_Adapter tienganh10_adapter;
+public class Tienganh11_Fragment extends Fragment {
+
+    Tienganh11_Adapter tienganh11_adapter;
     TabLayout tabLayout;
     ViewPager viewPager;
     View view;
@@ -24,14 +26,13 @@ public class Tienganh10_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_tienganh10_, container, false);
-            tienganh10_adapter = new Tienganh10_Adapter(getActivity().getSupportFragmentManager());
-            tabLayout = view.findViewById(R.id.tablayout_toan);
-            viewPager = view.findViewById(R.id.viewpager_toan);
-            viewPager.setAdapter(tienganh10_adapter);
-            tabLayout.setupWithViewPager(viewPager);
+        View view = inflater.inflate(R.layout.fragment_tienganh11_, container, false);
+        tienganh11_adapter = new Tienganh11_Adapter(getActivity().getSupportFragmentManager());
+        tabLayout = view.findViewById(R.id.tablayout_tienganh11);
+        viewPager = view.findViewById(R.id.viewpager_tienganh11);
+        viewPager.setAdapter(tienganh11_adapter);
+        tabLayout.setupWithViewPager(viewPager);
 
 
-            return view;
-    }
+        return view;    }
 }

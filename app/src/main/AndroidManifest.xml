@@ -4,24 +4,46 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/screen"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Quiz_Tienganh10_Activity"
-
-            android:theme="@style/mystyle"/>
+        <activity android:name=".ketqua_Activity"></activity>
+        <activity
+            android:name=".Quiz_tienganh12_Activity"
+            android:parentActivityName=".Dethi_tienganh12_Activity"
+            android:theme="@style/mystyle" />
+        <activity
+            android:name=".Dethi_tienganh12_Activity"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/mystyle" />
+        <activity android:name=".Tienganh12_Activity" />
+        <activity
+            android:name=".Quiz_Tienganh11_Activity"
+            android:parentActivityName=".MonTienganh11_Activity"
+            android:theme="@style/mystyle1" />
+        <activity
+            android:name=".MonTienganh11_Activity"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/mystyle" />
+        <activity
+            android:name=".Quiz_Tienganh10_Activity"
+            android:theme="@style/mystyle" />
+        <activity
+            android:name=".Dethi_TiengAnh11_Activity"
+            android:parentActivityName=".MonTienganh11_Activity"
+            android:theme="@style/mystyle" />
         <activity
             android:name=".Dethi_TiengAnh10_Activity"
-            android:parentActivityName=".MonHoc_Activity"
+            android:parentActivityName=".MonTienganh10_Activity"
             android:theme="@style/mystyle" />
         <activity
             android:name=".TailieuTiengAnh10_Activity"
-            android:parentActivityName=".MonHoc_Activity"
+            android:parentActivityName=".MonTienganh10_Activity"
             android:theme="@style/mystyle" />
         <activity
-            android:name=".MonHoc_Activity"
+            android:name=".MonTienganh10_Activity"
             android:parentActivityName=".HomeActivity"
             android:theme="@style/mystyle" />
         <activity

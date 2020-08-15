@@ -18,19 +18,21 @@ import android.widget.TextView;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.poly.tracnghiem12.Tienganh.Question_Tienganh10;
+import com.poly.tracnghiem12.Tienganh.Question_Tienganh11;
 import com.poly.tracnghiem12.Tienganh.Quiz_Tienganh10_Helper;
+import com.poly.tracnghiem12.Tienganh.Quiz_Tienganh11_Helper;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-public class Quiz_Tienganh10_Activity extends AppCompatActivity {
+public class Quiz_Tienganh11_Activity extends AppCompatActivity {
 
     private static final long COUNTDOWN_IN_MILIS = 1800000;
     private ColorStateList textColorDefaultcd;
     private CountDownTimer countDownTimer;
     private long timeleftinmilis;
-    AppBarLayout appBarLayout;
+    String categoryvalue;
 
 
     TextView tv_high_socre, tv_question_count, tv_count_down, tvquestion;
@@ -42,23 +44,29 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
     private ColorStateList textColorDefaultRb;
     private int questioncouter;
     private int questionCountTotal;
-    private Question_Tienganh10 currentQuestion;
+    private Question_Tienganh11 currentQuestion;
     private int score;
     private boolean ansWered;
 
-    List<Question_Tienganh10> questionList;
-    Quiz_Tienganh10_Helper quiz_tienganh10_helper;
+    List<Question_Tienganh11> questionList;
+    Quiz_Tienganh11_Helper quiz_tienganh11_helper;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz__tienganh10_);
+        setContentView(R.layout.activity_quiz__tienganh11_);
 
-        quiz_tienganh10_helper = new Quiz_Tienganh10_Helper(this);
-        Intent intent = getIntent();
-        String tendethi = intent.getStringExtra("tendethi");
+        quiz_tienganh11_helper = new Quiz_Tienganh11_Helper(this);
+//        Intent intent = getIntent();
+//        String tendethi = intent.getStringExtra("tendethi");
+//        setTitle(tendethi);
+//        categoryvalue = intent.getStringExtra("category");
+
+        Intent intentcategory = getIntent();
+        String tendethi = intentcategory.getStringExtra("tendethi");
         setTitle(tendethi);
+        categoryvalue = intentcategory.getStringExtra("category");
 
 
         tv_count_down = findViewById(R.id.tv_count_down);
@@ -74,8 +82,8 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
         textColorDefaultRb = rb1.getTextColors();
         textColorDefaultcd = tv_count_down.getTextColors();
 
-        Quiz_Tienganh10_Helper quizHelper = new Quiz_Tienganh10_Helper(this);
-        questionList = quizHelper.getallquestion();
+        Quiz_Tienganh11_Helper quizHelper = new Quiz_Tienganh11_Helper(this);
+        questionList = quizHelper.getquestiontienganh11(categoryvalue);
         questionCountTotal = questionList.size();
         Collections.shuffle(questionList);
 
@@ -91,7 +99,7 @@ public class Quiz_Tienganh10_Activity extends AppCompatActivity {
                         checkanswer();
 
                     } else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(Quiz_Tienganh10_Activity.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Quiz_Tienganh11_Activity.this);
                         builder.setMessage("Vui lòng chọn 1 câu trả lời");
                         builder.setPositiveButton("Đã hiểu", new DialogInterface.OnClickListener() {
                             @Override

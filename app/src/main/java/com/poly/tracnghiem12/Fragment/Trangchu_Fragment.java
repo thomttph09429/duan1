@@ -11,10 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.poly.tracnghiem12.MonHoc_Activity;
+import com.poly.tracnghiem12.Dethi_tienganh12_Activity;
+import com.poly.tracnghiem12.MonTienganh10_Activity;
+import com.poly.tracnghiem12.MonTienganh11_Activity;
 import com.poly.tracnghiem12.R;
 
 
@@ -43,9 +44,9 @@ public class Trangchu_Fragment extends Fragment {
                         ". Sau khi làm xong bạn chọn nộp\n" +
                         "bài và sau đó xem điểm của mình,\n" +
                         "bạn có thể chọn cách làm lại hoặc\n" +
-                        "lưu điểm của mình đã làm được");
+                        "thoát ra    ");
 
-                builder.setPositiveButton("Đã hiểu",new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Đã hiểu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -60,12 +61,28 @@ public class Trangchu_Fragment extends Fragment {
         tienganh10 = view.findViewById(R.id.tienganh10);
         tienganh11 = view.findViewById(R.id.tienganh11);
         tienganh12 = view.findViewById(R.id.tienganh12);
+        tienganh12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Dethi_tienganh12_Activity.class);
+                startActivity(intent);
+
+
+            }
+        });
+        tienganh11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MonTienganh11_Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
         tienganh10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MonHoc_Activity.class);
+                Intent intent = new Intent(getContext(), MonTienganh10_Activity.class);
                 startActivity(intent);
 
             }

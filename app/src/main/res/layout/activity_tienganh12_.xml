@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Dethi_tienganh12_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btn_hientaidon"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/category_select"
+                android:padding="15dp"
+
+                android:text="Hiện tại đơn"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_hientaitiepdien"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/category_select"
+                android:padding="15dp"
+                android:text="Hiện tại tiếp diễn"
+
+                android:textAllCaps="false" />
+
+            <Button
+                android:padding="15dp"
+
+                android:id="@+id/btn_hientaihoanthanh"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+
+                android:background="@drawable/category_select"
+                android:text="Hiện tại hoàn thành"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btn_hientaihoanthanhtiepdien"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:layout_gravity="center"
+
+
+                android:layout_weight="1"
+
+                android:background="@drawable/category_select"
+                android:text="Hiện tại hoàn thành tiếp diễn"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_quakhudon"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:padding="15dp"
+
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+
+                android:layout_weight="1"
+                android:background="@drawable/category_select"
+                android:text="Quá khứ đơn"
+                android:textAllCaps="false" />
+
+            <Button
+                android:padding="15dp"
+
+                android:id="@+id/btn_quakhutiepdien"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:background="@drawable/category_select"
+                android:text="Quá khứ tiếp diễn"
+                android:layout_gravity="center"
+
+
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:padding="15dp"
+
+                android:id="@+id/btn_quakhuhoanthanh"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                android:background="@drawable/category_select"
+                android:text="Quá khứ hoàn thành"
+                android:textAllCaps="false" />
+
+            <Button
+                android:padding="15dp"
+                android:id="@+id/btn_quakhuhoanthanhtiepdien"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/category_select"
+                android:layout_gravity="center"
+                android:text="Quá khứ hoàn thành tiếp diễn"
+
+                android:textAllCaps="false" />
+
+            <Button
+                android:padding="15dp"
+
+                android:id="@+id/btn_tuonglaidon"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                android:background="@drawable/category_select"
+                android:text="Tương lai đơn"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:padding="15dp"
+                android:layout_gravity="center"
+
+                android:id="@+id/btn_tuonglaitiepdien"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginRight="20dp"
+
+                android:layout_weight="1"
+                android:background="@drawable/category_select"
+                android:text="Tương lai tiếp diễn"
+                android:textAllCaps="false" />
+
+            <Button
+                android:padding="15dp"
+                android:layout_gravity="center"
+
+
+                android:id="@+id/btn_tuonglaihoanthanh"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/category_select"
+
+                android:text="Tương lai hoàn thành"
+
+                android:textAllCaps="false" />
+
+            <Button
+                android:padding="15dp"
+                android:layout_gravity="center"
+
+                android:id="@+id/btn_tuonglaihoanthanhtiepdien"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:background="@drawable/category_select"
+
+                android:text="Tương lai hoàn thành tiếp diễn"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

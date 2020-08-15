@@ -7,10 +7,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.poly.tracnghiem12.Fragment.DeThi_Tienganh10_Fragment;
+import com.poly.tracnghiem12.Fragment.DeThi_Tienganh11_Fragment;
 import com.poly.tracnghiem12.Fragment.TaiLieu_Tienganh10_Fragment;
 
-public class Tienganh10_Adapter extends FragmentStatePagerAdapter {
-    public Tienganh10_Adapter(@NonNull FragmentManager fragmentManager) {
+public class Tienganh11_Adapter extends FragmentStatePagerAdapter {
+    public Tienganh11_Adapter(@NonNull FragmentManager fragmentManager) {
         super(fragmentManager);
     }
 
@@ -18,7 +19,7 @@ public class Tienganh10_Adapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new DeThi_Tienganh10_Fragment();
+            return new DeThi_Tienganh11_Fragment();
         } else if (position == 1) {
 
             return new TaiLieu_Tienganh10_Fragment();
@@ -43,3 +44,4 @@ public class Tienganh10_Adapter extends FragmentStatePagerAdapter {
         return null;
     }
 }
+

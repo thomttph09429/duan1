@@ -1,24 +1,10 @@
-package com.poly.tracnghiem12.Tienganh10;
+package com.poly.tracnghiem12.Tienganh;
 
-public class Question_Tienganh10 {
+public class Question_tienganh12 {
     private String question;
     private String option1;
     private String option2;
     private String option3;
-    private String option4;
-    private int answer;
-
-    public Question_Tienganh10() {
-    }
-
-    public Question_Tienganh10(String question, String option1, String option2, String option3, String option4, int answer) {
-        this.question = question;
-        this.option1 = option1;
-        this.option2 = option2;
-        this.option3 = option3;
-        this.option4 = option4;
-        this.answer = answer;
-    }
 
     public String getQuestion() {
         return question;
@@ -67,4 +53,30 @@ public class Question_Tienganh10 {
     public void setAnswer(int answer) {
         this.answer = answer;
     }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    private String option4;
+    private int answer;
+
+    public Question_tienganh12() {
+    }
+
+    public Question_tienganh12(String question, String option1, String option2, String option3, String option4, int answer, String category) {
+        this.question = question;
+        this.option1 = option1;
+        this.option2 = option2;
+        this.option3 = option3;
+        this.option4 = option4;
+        this.answer = answer;
+        this.category = category;
+    }
+
+    private String category;
 }

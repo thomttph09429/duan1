@@ -15,14 +15,13 @@ import com.poly.tracnghiem12.Adapter.Dethi_Tienganh10_Adapter;
 import com.poly.tracnghiem12.Dethi_TiengAnh10_Activity;
 import com.poly.tracnghiem12.Model.Dethi_Tienganh10;
 import com.poly.tracnghiem12.R;
-import com.poly.tracnghiem12.Tienganh10.Quiz_Tienganh10_Helper;
+import com.poly.tracnghiem12.Tienganh.Quiz_Tienganh10_Helper;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class DeThi_Tienganh_Fragment extends Fragment {
+public class DeThi_Tienganh10_Fragment extends Fragment {
     Dethi_Tienganh10_Adapter dethi_toan_adapter;
     List<Dethi_Tienganh10> dethi_toans;
     Dethi_Tienganh10 dethi_toan;

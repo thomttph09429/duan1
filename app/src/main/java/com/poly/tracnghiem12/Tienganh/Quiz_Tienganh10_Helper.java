@@ -1,17 +1,13 @@
-package com.poly.tracnghiem12.Tienganh10;
+package com.poly.tracnghiem12.Tienganh;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.view.LayoutInflater;
-import android.widget.Toast;
 
-import com.poly.tracnghiem12.Adapter.Dethi_Tienganh10_Adapter;
-import com.poly.tracnghiem12.Fragment.DeThi_Tienganh_Fragment;
 import com.poly.tracnghiem12.Quiz_Tienganh10_Activity;
-import com.poly.tracnghiem12.Tienganh10.Quiz_Tienganh10_Contract.*;
+import com.poly.tracnghiem12.Tienganh.Quiz_Tienganh10_Contract.*;
 
 import java.util.ArrayList;
 import java.util.List;
