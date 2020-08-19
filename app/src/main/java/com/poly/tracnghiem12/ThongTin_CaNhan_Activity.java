@@ -51,26 +51,6 @@ public class ThongTin_CaNhan_Activity extends AppCompatActivity  {
 
 
 
-
-
-
-
-
-//
-//        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-//        editor = sharedPreferences.edit();
-//        String savehotens = sharedPreferences.getString("hotens", "");
-//        String savematkhaus = sharedPreferences.getString("matkhaus", "");
-//        String savequequans = sharedPreferences.getString("quequans", "");
-//        String savetendangnhaps = sharedPreferences.getString("tendangnhaps", "");
-//        String savetruongdanghocs = sharedPreferences.getString("truongdanghocs", "");
-//        edtendangnhaptt.setText(savetendangnhaps);
-//        edquequantt.setText(savequequans);
-//        edhotentt.setText(savehotens);
-//        edtruongdanghoctt.setText(savetruongdanghocs);
-//        edmatkhautt.setText(savematkhaus);
-//        btnluu.setOnClickListener(this);
-
     }
 
 

@@ -74,15 +74,17 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Họ vàvtên"
             android:layout_weight="1"
-            android:text="Họ tên"
             android:textStyle="bold" />
 
         <EditText
+            android:layout_weight="1"
+
             android:id="@+id/edhotentt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            />
     </LinearLayout>
 
     <LinearLayout

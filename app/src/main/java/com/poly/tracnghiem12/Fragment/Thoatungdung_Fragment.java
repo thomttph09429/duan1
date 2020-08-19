@@ -34,14 +34,13 @@ public class Thoatungdung_Fragment extends Fragment {
                 builder.setPositiveButton("thoát", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-//                        Intent intent = new Intent(getContext(), Ma.class);
-//                        startActivity(intent);
 
-                        // Tao su kien ket thuc app
-//                        Intent startMain = new Intent(Intent.ACTION_MAIN);
-//                        startMain.addCategory(Intent.CATEGORY_HOME);
-//                        startActivity(startMain);
-//                        finish();
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.addCategory(Intent.CATEGORY_HOME);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                       getActivity(). finish();
+
                     }
                 });
                 builder.setNegativeButton("hủy", new DialogInterface.OnClickListener() {
@@ -58,7 +57,6 @@ public class Thoatungdung_Fragment extends Fragment {
 
         return view;
     }
-
 
 
 }

@@ -3,16 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="20dp"
     android:orientation="vertical"
+    android:paddingTop="100dp"
     tools:context=".Fragment.Thoatungdung_Fragment">
 
     <Button
         android:id="@+id/btn_thoat"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:background="@drawable/shape"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="Thoát ứng dụng" />
 </LinearLayout>

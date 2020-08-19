@@ -71,7 +71,6 @@ public class Dangky_Activity extends AppCompatActivity {
                 Toast.makeText(Dangky_Activity.this, "Tên đăng nhập  trùng", Toast.LENGTH_LONG).show();
             }
         }
-
     }
 
 
