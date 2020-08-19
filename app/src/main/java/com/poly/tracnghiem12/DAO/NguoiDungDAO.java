@@ -56,7 +56,7 @@ public class NguoiDungDAO extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
         List<NguoiDung> nguoiDungList = new ArrayList<>();
         String Select = "SELECT * FROM " + TABLE_NAME;
-        Cursor cursor = sqLiteDatabase.rawQuery(Select, null);
+      final   Cursor cursor = sqLiteDatabase.rawQuery(Select, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             NguoiDung nguoiDung = new NguoiDung();
@@ -73,18 +73,22 @@ public class NguoiDungDAO extends SQLiteOpenHelper {
 
 
     }
+    public void cusor(){
 
-//    public boolean kiemtranguoidung() {
-//        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-//        String SELECT = "SELECT * FROM " + TABLE_NAME;
-//        Cursor cursor = sqLiteDatabase.rawQuery(SELECT, null);
-//        if (cursor.getCount() != 0) {
-//            return true;
-//
-//        } else {
-//            return false;
-//        }
-//    }
+    }
+
+    public long update(NguoiDung nguoiDung) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_TENDANGNHAP, nguoiDung.getTendangnhap());
+        contentValues.put(COLUMN_MATKHAU, nguoiDung.getMatkhau());
+        contentValues.put(COLUMN_HOTEN, nguoiDung.getHoten());
+        contentValues.put(COLUMN_TRUONGDANGHOC, nguoiDung.getTruongdanghoc());
+        contentValues.put(COLUMN_QUEQUAN, nguoiDung.getQuequan());
+        long kq = sqLiteDatabase.update(TABLE_NAME, contentValues, COLUMN_TENDANGNHAP + " = ? ", new String[]{nguoiDung.getTendangnhap()});
+
+    return kq;}
+
 
     public boolean kiemtralogin(String tendangnhap, String matkhau) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();

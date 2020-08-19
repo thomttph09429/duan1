@@ -1,188 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/contraintlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="20dp"
-    android:paddingRight="10dp"
+    android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".ThongTin_CaNhan_Activity">
 
+
     <TextView
-        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Thông tin cá nhân"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        android:textColor="#912020"
+        android:textSize="20dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151">
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvtendangnhap"
 
-            android:layout_width="76dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Tên đăng nhập"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvtdn"
+        <EditText
+            android:id="@+id/edtendangnhaptt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Tên đăng nhập" />
+            android:hint="tendangnhap" />
     </LinearLayout>
 
 
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvmatkhau"
 
-            android:layout_width="76dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Mật khẩu"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvmk"
+        <EditText
+            android:id="@+id/edmatkhautt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Tên đăng nhập" />
+            android:hint="matkhau" />
     </LinearLayout>
 
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvhoten"
 
-            android:layout_width="76dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Họ tên"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvht"
+        <EditText
+            android:id="@+id/edhotentt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tên đăng nhập" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvtruongdanghoc"
 
-            android:layout_width="76dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Trường đang học"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvtdh"
+        <EditText
+            android:id="@+id/edtruongdanghoctt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tên đăng nhập" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvquequan"
 
-            android:layout_width="76dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Quê quán"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvqq"
+        <EditText
+            android:id="@+id/edquequantt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Tên đăng nhập" />
+            android:hint="que" />
     </LinearLayout>
 
 
     <Button
-        android:onClick="dangxuat"
+        android:layout_marginTop="10dp"
         android:id="@+id/btn_dangxuat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
+        android:onClick="dangxuat"
         android:text="Đăng xuất"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_start"
-        app:layout_constraintVertical_bias="0.053" />
+        android:layout_marginBottom="10dp"
+ />
 
     <Button
         android:id="@+id/btn_start"
@@ -191,26 +148,17 @@
         android:background="@drawable/shape"
         android:onClick="btnstart"
         android:text="Tiếp"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_update"
-        app:layout_constraintVertical_bias="0.039" />
+        android:layout_marginBottom="10dp"
+
+        android:textColor="#ffffff" />
 
     <Button
-        android:onClick="sua_thong_tin"
         android:id="@+id/btn_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
-        android:text="Sửa thông tin"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.138" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:onClick="capnhat"
+        android:text="Cập nhật"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

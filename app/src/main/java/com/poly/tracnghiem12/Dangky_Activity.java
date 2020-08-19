@@ -12,12 +12,13 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.poly.tracnghiem12.DAO.NguoiDungDAO;
+import com.poly.tracnghiem12.Fragment.Trangchu_Fragment;
 import com.poly.tracnghiem12.Model.NguoiDung;
 
 public class Dangky_Activity extends AppCompatActivity {
     NguoiDungDAO nguoiDungDAO;
     EditText edtendangnhaps, edhoten, edtruongdanghoc, edquequan;
-TextInputLayout textInputLayoutmatkhau;
+    TextInputLayout textInputLayoutmatkhau;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,8 @@ TextInputLayout textInputLayoutmatkhau;
         edhoten = findViewById(R.id.edhoten);
         edtruongdanghoc = findViewById(R.id.edtruongdanghoc);
         edquequan = findViewById(R.id.edquequan);
-textInputLayoutmatkhau= findViewById(R.id.etPasswordLayout);
+        textInputLayoutmatkhau = findViewById(R.id.etPasswordLayout);
+
     }
 
     public void back(View view) {
@@ -49,6 +51,7 @@ textInputLayoutmatkhau= findViewById(R.id.etPasswordLayout);
 
         } else {
             NguoiDung nguoiDung = new NguoiDung();
+
             nguoiDung.setMatkhau(textInputLayoutmatkhau.getEditText().getText().toString());
             nguoiDung.setTendangnhap(edtendangnhaps.getText().toString());
             nguoiDung.setHoten(edhoten.getText().toString());
@@ -56,26 +59,20 @@ textInputLayoutmatkhau= findViewById(R.id.etPasswordLayout);
             nguoiDung.setQuequan(edquequan.getText().toString());
 
 
+
             long kq = nguoiDungDAO.inertnguoidung(nguoiDung);
             if (kq > 0) {
+                Toast.makeText(Dangky_Activity.this, "Đăng kí thành công", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Dangky_Activity.this, HomeActivity.class);
 
-
-
-                Intent intent = new Intent(Dangky_Activity.this, ThongTin_CaNhan_Activity.class);
-                Bundle bundle =new Bundle();
-                bundle.putString("tendangnhap", edtendangnhaps.getText().toString());
-                bundle.putString("matkhau", textInputLayoutmatkhau.getEditText().getText().toString());
-                bundle.putString("hoten", edhoten.getText().toString());
-                bundle.putString("truongdanghoc", edtruongdanghoc.getText().toString());
-                bundle.putString("quequan", edquequan.getText().toString());
-                intent.putExtra("thongtincanhan", bundle);
                 startActivity(intent);
 
-
             } else {
-                Toast.makeText(Dangky_Activity.this, "Lỗi", Toast.LENGTH_LONG).show();
+                Toast.makeText(Dangky_Activity.this, "Tên trùng", Toast.LENGTH_LONG).show();
             }
         }
 
     }
+
+
 }
