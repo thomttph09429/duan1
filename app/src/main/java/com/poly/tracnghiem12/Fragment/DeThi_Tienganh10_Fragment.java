@@ -40,30 +40,30 @@ public class DeThi_Tienganh10_Fragment extends Fragment {
         quiz_tienganh10_helper = new Quiz_Tienganh10_Helper(getContext());
 
 
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 1", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 2", "90 phút", "50 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 1", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 2", "30 phút", "20 câu"));
 
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 3", "90 phút", "50 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 3", "30 phút", "20 câu"));
 
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 4", "90 phút", "50 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 4", "30 phút", "20 câu"));
 
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 5", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 6", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 7", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 8", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 9", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 10", "90 phút", "50 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 5", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 6", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 7", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 8", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 9", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 10", "30 phút", "20 câu"));
 
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 10", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 11", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 12", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 13", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 14", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 15", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 16", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 18", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 19", "90 phút", "50 câu"));
-        dethi_toans.add(new Dethi_Tienganh10("Đề số 20", "90 phút", "50 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 10", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 11", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 12", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 13", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 14", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 15", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 16", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 18", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 19", "30 phút", "20 câu"));
+        dethi_toans.add(new Dethi_Tienganh10("Đề số 20", "30 phút", "20 câu"));
 
         dethi_toan_adapter = new Dethi_Tienganh10_Adapter(getContext(), dethi_toans);
         intent = new Intent(getContext(), Dethi_TiengAnh10_Activity.class);

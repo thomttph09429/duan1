@@ -16,7 +16,7 @@ import java.util.List;
 public class Quiz_Tienganh11_Helper extends SQLiteOpenHelper {
     Quiz_Tienganh11_Activity quiz_tienganh11_activity;
     public static final String DATABASE_NAME1 = "quiztienganh11.db";
-    public static final int VERSION = 9;
+    public static final int VERSION = 11;
     SQLiteDatabase db;
 
     public Quiz_Tienganh11_Helper(Context context) {
@@ -55,11 +55,37 @@ public class Quiz_Tienganh11_Helper extends SQLiteOpenHelper {
 
 
     public void fillquestiontable1() {
-
+        Question_Tienganh11 tienganh11_cau5765 = new Question_Tienganh11("I felt better when enjoying the ______ climate on my uncle’s farm.", "A. health ", "B. healthy", "C. healthiness", "D. healthily", 2, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau5765);
 //        Question_Tienganh11 tienganh11_cau = new Question_Tienganh11("", "A. ", "B. ", "C. ","D. ",)
 //        addquestion(tienganh11_cau );
+        Question_Tienganh11 tienganh11_cau311 = new Question_Tienganh11("All the guests got dressed in ________ costume.", "A. Nation", "B. national", "C. nationally", "D. nationalize", 2, Question_Tienganh11.CATEGORY_DETHISO4);
+        addquestion(tienganh11_cau311);
+        Question_Tienganh11 tienganh11_cau321 = new Question_Tienganh11("Tom can run faster than Tim.", "A. Tim can run faster than Tom", "B. Tim can run as fast as Tom.", "C. Tim can not run as fast as Tom.", "D. Tom can run as slowly as Tim", 3, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau321);
+        Question_Tienganh11 tienganh11_cau331 = new Question_Tienganh11("Gold ________ near San Francisco in 1848, and the gold rush started the following year.", "A. discovered ", "B. was discovered", "C. has been discovered", "D. is discovered", 2, Question_Tienganh11.CATEGORY_DETHISO1);
 
+        addquestion(tienganh11_cau331);
+        Question_Tienganh11 tienganh11_cau341 = new Question_Tienganh11("If Tom is late again, he _______ his job.", "A. loses ", "B. lost", "C. will lose ", "D. would lose", 3, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau341);
 
+        Question_Tienganh11 tienganh11_cau351 = new Question_Tienganh11("I remember __________ my mother said the carpets needed __________.", "A. to hear/to clean  ", "B. hear / clean ", "C. hearing/cleaning ", "D. heard /cleaned ", 3, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau351);
+
+        Question_Tienganh11 tienganh11_cau361 = new Question_Tienganh11("A film which is made by photographing a series of changing drawings is called a _______.", "A. drama ", "B. cartoon", "C.  comedy", "D. documentary ", 2, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau361);
+
+        Question_Tienganh11 tienganh11_cau27 = new Question_Tienganh11("I’m afraid my parents do not allow me ______ on a long journey.", "A. to go  ", "B.to going ", "C. going ", "D. will go", 1, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau27);
+
+        Question_Tienganh11 tienganh11_cau28 = new Question_Tienganh11("We are going on ______ trip to Nha Trang next week.", "A. a two-day’s ", "B. two-day", "C. a two-days", "D. a two-day ", 4, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau28);
+
+        Question_Tienganh11 tienganh11_cau29 = new Question_Tienganh11("I ______ go swimming when I was a boy.", "A.  am using to  ", "B.was used to  ", "C. used to", "D.use to", 3, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau29);
+
+        Question_Tienganh11 tienganh11_cau30 = new Question_Tienganh11("Although I do not get a good salary, ______.", "A. that I like my job  ", "B. but I like my job", "C. I like my job ", "D. ", 3, Question_Tienganh11.CATEGORY_DETHISO1);
+        addquestion(tienganh11_cau30);
         Question_Tienganh11 tienganh11_cau1 = new Question_Tienganh11("All the guests got dressed in ________ costume.", "A. Nation", "B. national", "C. nationally", "D. nationalize", 2, Question_Tienganh11.CATEGORY_DETHISO1);
         addquestion(tienganh11_cau1);
         Question_Tienganh11 tienganh11_cau2 = new Question_Tienganh11("Tom can run faster than Tim.", "A. Tim can run faster than Tom", "B. Tim can run as fast as Tom.", "C. Tim can not run as fast as Tom.", "D. Tom can run as slowly as Tim", 3, Question_Tienganh11.CATEGORY_DETHISO1);
@@ -114,7 +140,33 @@ public class Quiz_Tienganh11_Helper extends SQLiteOpenHelper {
         Question_Tienganh11 tienganh11_cau24 = new Question_Tienganh11("The tourist guide can ______ English and French fluently.", "A. talk ", "B. ask", "C. speak", "D. say", 3, Question_Tienganh11.CATEGORY_DETHISO3);
         addquestion(tienganh11_cau24);
 
+        Question_Tienganh11 tienganh11_cau50 = new Question_Tienganh11("Marie Curie was the first woman ________a Ph.D. from the Sorbonne.", "A. to receive ", "B. was received", "C. receive", "D. received", 1, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau50);
 
+
+        Question_Tienganh11 tienganh11_cau51 = new Question_Tienganh11("What programme is ________VTV3 ________7:00?", "in/ in ", "B. on/ at", "C. at/ in", "D. on/ on", 2, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau51);
+        Question_Tienganh11 tienganh_cau52 = new Question_Tienganh11("Mary will tell her mother the truth when she ________back", "A. would come", "B. comes", "C. will come", "D. will have come", 2, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh_cau52);
+
+        Question_Tienganh11 tienganh11_cau53 = new Question_Tienganh11("This computer isn’t capable ______ running this software.", "A. off ", "B. on ", "C. in ", "D. for", 2, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau53);
+        Question_Tienganh11 tienganh11_cau54 = new Question_Tienganh11("The shop has been in business ______ many years. ", "A. during ", "B. for", "C. in", "D. since", 2, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau54);
+        Question_Tienganh11 tienganh11_cau55 = new Question_Tienganh11("A film which is made by photographing a series of changing drawings is called a ________.", "A. comedy ", "B. cartoon ", "C. documentary ", "D. drama ", 2, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau55);
+        Question_Tienganh11 tienganh11_cau56 = new Question_Tienganh11("________the bad condition of the house, it was sold at a high price.", "A. Because ", "B. Because of ", "C.Although ", "D. In spite of", 4, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau56);
+        Question_Tienganh11 tienganh11_cau57 = new Question_Tienganh11("I felt better when enjoying the ______ climate on my uncle’s farm.", "A. health ", "B. healthy", "C. healthiness", "D. healthily", 2, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau57);
+
+
+        Question_Tienganh11 tienganh11_cau58 = new Question_Tienganh11("Choose the word whose main stress is placed differently from that of the others.", "A. subtract ", "B. effort", "C. primary", "D. suffer", 1, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau58);
+        Question_Tienganh11 tienganh11_cau59 = new Question_Tienganh11("Choose the word whose stress pattern is different from that of the others.", "A. beautiful ", "B. interesting ", "C. wonderful ", "D. development", 4, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau59);
+        Question_Tienganh11 tienganh11_cau60 = new Question_Tienganh11("Choose the word whose stress pattern is different from that of the others.", "A. background  ", "B.  career ", "C.  second ", "D.  private", 2, Question_Tienganh11.CATEGORY_DETHISO2);
+        addquestion(tienganh11_cau60);
         Question_Tienganh11 tienganh11_cau20 = new Question_Tienganh11("I will give your regards to her ________I meet her tomorrow.", "A. while", "B. when", "C. even if", "D. if", 4, Question_Tienganh11.CATEGORY_DETHISO3);
         addquestion(tienganh11_cau20);
 
@@ -122,17 +174,17 @@ public class Quiz_Tienganh11_Helper extends SQLiteOpenHelper {
         addquestion(tienganh11_cau25);
         Question_Tienganh11 tienganh11_cau26 = new Question_Tienganh11("The shop has been in business ______ many years. ", "A. during ", "B. for", "C. in", "D. since", 2, Question_Tienganh11.CATEGORY_DETHISO3);
         addquestion(tienganh11_cau26);
-        Question_Tienganh11 tienganh11_cau27 = new Question_Tienganh11("I’m afraid my parents do not allow me ______ on a long journey.", "A. to go  ", "B.to going ", "C. going ", "D. will go", 1, Question_Tienganh11.CATEGORY_DETHISO3);
-        addquestion(tienganh11_cau27);
+        Question_Tienganh11 tienganh11_cau274 = new Question_Tienganh11("I’m afraid my parents do not allow me ______ on a long journey.", "A. to go  ", "B.to going ", "C. going ", "D. will go", 1, Question_Tienganh11.CATEGORY_DETHISO3);
+        addquestion(tienganh11_cau274);
 
-        Question_Tienganh11 tienganh11_cau28 = new Question_Tienganh11("We are going on ______ trip to Nha Trang next week.", "A. a two-day’s ", "B. two-day", "C. a two-days", "D. a two-day ", 4, Question_Tienganh11.CATEGORY_DETHISO3);
-        addquestion(tienganh11_cau28);
+        Question_Tienganh11 tienganh11_cau284 = new Question_Tienganh11("We are going on ______ trip to Nha Trang next week.", "A. a two-day’s ", "B. two-day", "C. a two-days", "D. a two-day ", 4, Question_Tienganh11.CATEGORY_DETHISO3);
+        addquestion(tienganh11_cau284);
 
-        Question_Tienganh11 tienganh11_cau29 = new Question_Tienganh11("I ______ go swimming when I was a boy.", "A.  am using to  ", "B.was used to  ", "C. used to", "D.use to", 3, Question_Tienganh11.CATEGORY_DETHISO3);
-        addquestion(tienganh11_cau29);
+        Question_Tienganh11 tienganh11_cau294 = new Question_Tienganh11("I ______ go swimming when I was a boy.", "A.  am using to  ", "B.was used to  ", "C. used to", "D.use to", 3, Question_Tienganh11.CATEGORY_DETHISO3);
+        addquestion(tienganh11_cau294);
 
-        Question_Tienganh11 tienganh11_cau30 = new Question_Tienganh11("Although I do not get a good salary, ______.", "A. that I like my job  ", "B. but I like my job", "C. I like my job ", "D. ", 3, Question_Tienganh11.CATEGORY_DETHISO3);
-        addquestion(tienganh11_cau30);
+        Question_Tienganh11 tienganh11_cau304 = new Question_Tienganh11("Although I do not get a good salary, ______.", "A. that I like my job  ", "B. but I like my job", "C. I like my job ", "D. ", 3, Question_Tienganh11.CATEGORY_DETHISO3);
+        addquestion(tienganh11_cau304);
 
 
         Question_Tienganh11 tienganh11_cau31 = new Question_Tienganh11("All the guests got dressed in ________ costume.", "A. Nation", "B. national", "C. nationally", "D. nationalize", 2, Question_Tienganh11.CATEGORY_DETHISO4);
@@ -184,33 +236,33 @@ public class Quiz_Tienganh11_Helper extends SQLiteOpenHelper {
         addquestion(tienganh11_cau48);
         Question_Tienganh11 tienganh11_cau49 = new Question_Tienganh11("Mary will tell her mother the truth when she ________back", "A. would come", "B. comes", "C. will come", "D. will have come", 2, Question_Tienganh11.CATEGORY_DETHISO5);
         addquestion(tienganh11_cau49);
-        Question_Tienganh11 tienganh11_cau50 = new Question_Tienganh11("Marie Curie was the first woman ________a Ph.D. from the Sorbonne.", "A. to receive ", "B. was received", "C. receive", "D. received", 1, Question_Tienganh11.CATEGORY_DETHISO5);
-        addquestion(tienganh11_cau50);
+        Question_Tienganh11 tienganh11_cau505 = new Question_Tienganh11("Marie Curie was the first woman ________a Ph.D. from the Sorbonne.", "A. to receive ", "B. was received", "C. receive", "D. received", 1, Question_Tienganh11.CATEGORY_DETHISO5);
+        addquestion(tienganh11_cau505);
 
 
-        Question_Tienganh11 tienganh11_cau51 = new Question_Tienganh11("What programme is ________VTV3 ________7:00?", "in/ in ", "B. on/ at", "C. at/ in", "D. on/ on", 2, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau51);
-        Question_Tienganh11 tienganh_cau52 = new Question_Tienganh11("Mary will tell her mother the truth when she ________back", "A. would come", "B. comes", "C. will come", "D. will have come", 2, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh_cau52);
+        Question_Tienganh11 tienganh11_cau515 = new Question_Tienganh11("What programme is ________VTV3 ________7:00?", "in/ in ", "B. on/ at", "C. at/ in", "D. on/ on", 2, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau515);
+        Question_Tienganh11 tienganh_cau525 = new Question_Tienganh11("Mary will tell her mother the truth when she ________back", "A. would come", "B. comes", "C. will come", "D. will have come", 2, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh_cau525);
 
-        Question_Tienganh11 tienganh11_cau53 = new Question_Tienganh11("This computer isn’t capable ______ running this software.", "A. off ", "B. on ", "C. in ", "D. for", 2, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau53);
-        Question_Tienganh11 tienganh11_cau54 = new Question_Tienganh11("The shop has been in business ______ many years. ", "A. during ", "B. for", "C. in", "D. since", 2, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau54);
-        Question_Tienganh11 tienganh11_cau55 = new Question_Tienganh11("A film which is made by photographing a series of changing drawings is called a ________.", "A. comedy ", "B. cartoon ", "C. documentary ", "D. drama ", 2, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau55);
-        Question_Tienganh11 tienganh11_cau56 = new Question_Tienganh11("________the bad condition of the house, it was sold at a high price.", "A. Because ", "B. Because of ", "C.Although ", "D. In spite of", 4, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau56);
-        Question_Tienganh11 tienganh11_cau57 = new Question_Tienganh11("I felt better when enjoying the ______ climate on my uncle’s farm.", "A. health ", "B. healthy", "C. healthiness", "D. healthily", 2, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau57);
+        Question_Tienganh11 tienganh11_cau555 = new Question_Tienganh11("This computer isn’t capable ______ running this software.", "A. off ", "B. on ", "C. in ", "D. for", 2, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau555);
+        Question_Tienganh11 tienganh11_cau545 = new Question_Tienganh11("The shop has been in business ______ many years. ", "A. during ", "B. for", "C. in", "D. since", 2, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau545);
+        Question_Tienganh11 tienganh11_cau5555 = new Question_Tienganh11("A film which is made by photographing a series of changing drawings is called a ________.", "A. comedy ", "B. cartoon ", "C. documentary ", "D. drama ", 2, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau5555);
+        Question_Tienganh11 tienganh11_cau566 = new Question_Tienganh11("________the bad condition of the house, it was sold at a high price.", "A. Because ", "B. Because of ", "C.Although ", "D. In spite of", 4, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau566);
+        Question_Tienganh11 tienganh11_cau576 = new Question_Tienganh11("I felt better when enjoying the ______ climate on my uncle’s farm.", "A. health ", "B. healthy", "C. healthiness", "D. healthily", 2, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau576);
 
 
-        Question_Tienganh11 tienganh11_cau58 = new Question_Tienganh11("Choose the word whose main stress is placed differently from that of the others.", "A. subtract ", "B. effort", "C. primary", "D. suffer", 1, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau58);
-        Question_Tienganh11 tienganh11_cau59 = new Question_Tienganh11("Choose the word whose stress pattern is different from that of the others.", "A. beautiful ", "B. interesting ", "C. wonderful ", "D. development", 4, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau59);
-        Question_Tienganh11 tienganh11_cau60 = new Question_Tienganh11("Choose the word whose stress pattern is different from that of the others.", "A. background  ", "B.  career ", "C.  second ", "D.  private", 2, Question_Tienganh11.CATEGORY_DETHISO6);
-        addquestion(tienganh11_cau60);
+        Question_Tienganh11 tienganh11_cau586 = new Question_Tienganh11("Choose the word whose main stress is placed differently from that of the others.", "A. subtract ", "B. effort", "C. primary", "D. suffer", 1, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau586);
+        Question_Tienganh11 tienganh11_cau596 = new Question_Tienganh11("Choose the word whose stress pattern is different from that of the others.", "A. beautiful ", "B. interesting ", "C. wonderful ", "D. development", 4, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau596);
+        Question_Tienganh11 tienganh11_cau606 = new Question_Tienganh11("Choose the word whose stress pattern is different from that of the others.", "A. background  ", "B.  career ", "C.  second ", "D.  private", 2, Question_Tienganh11.CATEGORY_DETHISO6);
+        addquestion(tienganh11_cau606);
 
     }
 

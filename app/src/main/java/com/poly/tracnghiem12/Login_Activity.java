@@ -35,7 +35,6 @@ public class Login_Activity extends AppCompatActivity {
 textInputLayout = findViewById(R.id.textInputLayout);
         btndangki = findViewById(R.id.btndangki);
         btndangnhap = findViewById(R.id.btndangnhap);
-        btnloginfb = findViewById(R.id.btnloginfb);
         nguoiDungDAO = new NguoiDungDAO(this);
 
 
@@ -63,21 +62,20 @@ textInputLayout = findViewById(R.id.textInputLayout);
         String matkhau = textInputLayout.getEditText() .getText().toString();
         boolean kiemtra = nguoiDungDAO.kiemtralogin(tendangnhap, matkhau);
         if (kiemtra) {
-            Intent intent = new Intent( Login_Activity.this, ThongTin_CaNhan_Activity.class);
+            Intent intent = new Intent( Login_Activity.this, HomeActivity.class);
             startActivity(intent);
+            Toast.makeText(Login_Activity.this, "Đăng nhập thành công", Toast.LENGTH_LONG).show();
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(Login_Activity.this);
-            builder.setTitle("bạn chưa có tài khoản");
-            builder.setMessage("bạn có muốn đăng kí ?");
-            builder.setPositiveButton("đăng kí", new DialogInterface.OnClickListener() {
+            builder.setTitle("Bạn chưa có tài khoản");
+            builder.setMessage("Bạn có muốn đăng kí ?");
+            builder.setPositiveButton("Đăng kí", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
 
                     Intent intent = new Intent( Login_Activity.this, Dangky_Activity.class);
                     startActivity(intent);
-//                    edtendangnhap.requestFocus();
-//                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-//                    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,0);
+
 
                 }
             });

@@ -40,11 +40,10 @@ public class Trangchu_Fragment extends Fragment {
                 builder.setMessage(".Bạn có thể làm bài trắc nghiệm\n" +
                         "bằng cách chọn môn học rồi sau \n" +
                         "đó trả lời từng câu hỏi đước đưa ra\n" +
-                        ". Mỗi đề sẽ có 40 câu hỏi\n" +
-                        ". Sau khi làm xong bạn chọn nộp\n" +
-                        "bài và sau đó xem điểm của mình,\n" +
+                        ". Sau khi làm xong finish\n" +
+                        "bài và sau đó xem số câu đúng câu sai,\n" +
                         "bạn có thể chọn cách làm lại hoặc\n" +
-                        "thoát ra    ");
+                        "trở về màn hình chính");
 
                 builder.setPositiveButton("Đã hiểu", new DialogInterface.OnClickListener() {
                     @Override

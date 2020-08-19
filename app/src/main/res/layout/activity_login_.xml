@@ -53,16 +53,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="472dp"
-        android:text="lưu mật khẩu?"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <Button
 
@@ -95,18 +86,4 @@
         app:layout_constraintTop_toBottomOf="@+id/btndangnhap"
         app:layout_constraintVertical_bias="0.034" />
 
-    <Button
-        android:id="@+id/btnloginfb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#3A96F2"
-        android:onClick="loginfb"
-        android:text="đăng nhập bằng facebook"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btndangki"
-        app:layout_constraintVertical_bias="0.04" />
 </androidx.constraintlayout.widget.ConstraintLayout>

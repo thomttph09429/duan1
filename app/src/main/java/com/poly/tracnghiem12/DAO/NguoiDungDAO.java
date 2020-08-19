@@ -89,7 +89,7 @@ public class NguoiDungDAO extends SQLiteOpenHelper {
 
     return kq;}
 
-
+// code kiểm tra 
     public boolean kiemtralogin(String tendangnhap, String matkhau) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
@@ -102,5 +102,6 @@ public class NguoiDungDAO extends SQLiteOpenHelper {
             return false;
         }
     }
+    //
 
 }

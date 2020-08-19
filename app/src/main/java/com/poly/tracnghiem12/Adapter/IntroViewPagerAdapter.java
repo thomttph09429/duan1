@@ -28,10 +28,10 @@ public class IntroViewPagerAdapter extends PagerAdapter {
 
     };
     public String[] screen_title = {"Chào mừng bạn đến với ứng dụng giải bài trắc nghiệm", "Một ứng dụng giải bài cho tất cả ", "có kết quả nhanh nhất"};
-    public String[] description = {"giải nhanh tất cả đề bài các môn toán, vật lí, hóa học...",
+    public String[] description = {"tiếng anh lớp 12 ",
 
             "Đề thi được cập nhật liên tục",
-            "Mời bạn đến bước tiếp theo để trải nghiệm bộ đề"};
+            "Mời bạn đến bước tiếp theo để trải nghiệm câu hỏi trắc nghiệm"};
     public int[] screen_image = {R.drawable.hoctap1, R.drawable.hoctap2, R.drawable.hoctap3};
 
 
